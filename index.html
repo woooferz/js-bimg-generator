@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <input type="file" id="imageSelect" accept="image/*"/>
+    <div>
+      <label>Dither</label>
+      <select id="ditherType">
+        <option value="">None</option>
+        <option value="FloydSteinberg">Floyd Steinberg</option>
+        <option value="FalseFloydSteinberg">False Floyd Steinberg</option>
+        <option value="Stucki">Stucki</option>
+        <option value="Atkinson">Atkinson</option>
+        <option value="Jarvis">Jarvis</option>
+        <option value="Burkes">Burkes</option>
+        <option value="Sierra">Sierra</option>
+        <option value="TwoSierra">Two Sierra</option>
+        <option value="SierraLite">Sierra Lite</option>
+      </select>
+      <input type="checkbox" id="serpentineDither">
+      <label for="serpentineDither">Serpentine Dither</label>
+    </div>
+    <div>
+      <label>Palette</label>
+      <select id="paletteSelect">
+        <option value="default">Default</option>
+        <option value="best">Best</option>
+        <option value="custom">Custom</option>
+      </select>
+      <input type="text" id="paletteInput">
+    </div>
+    <div>
+      <label>Font</label>
+      <select id="fontSelect">
+        <option value="blit">Blit Chars</option>
+        <option value="font">Font</option>
+        <option value="space">Space</option>
+        <option value="custom">Custom</option>
+      </select>
+      <input type="text" id="fontInput">
+    </div>
+    <div>
+      <label>Size</label>
+      <select id="size">
+        <option value="term">Term</option>
+        <option value="image">Image Size</option>
+        <option value="custom">Custom</option>
+      </select>
+      <select id="sizeUnits">
+        <option value="pixels">Pixels</option>
+        <option value="chars">Characters</option>
+        <option value="monitors">Monitors</option>
+      </select>
+      <input type="number" min="1" id="sizeX" value="1">
+      <input type="number" min="1" id="sizeY" value="1">
+    </div>
+    <div>
+      <label>Format</label>
+      <select id="format">
+        <option value="bimg">BIMG</option>
+        <option value="bbf">BBF</option>
+        <option value="nfp">NFP</option>
+      </select>
+    </div>
+    <div>
+      <button id="process">Process</button>
+      <button id="save">Save</button>
+    </div>
+    <div>
+      <label>Character Resolution: </label>
+      <label id="charRes"></label>
+    </div>
+    <img id="inputImage" hidden>
+    <canvas id="canvas" width="640" height="400" hidden></canvas>
+    <img id="outputImage">
+    <script src="rgbquant.js"></script>
+    <script src="FileSaver.js"></script>
+    <script src="font_lib.js"></script>
+    <script src="font_applier.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

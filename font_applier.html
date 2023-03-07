@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <div>
+      <input type="file" id="imageInput" name="imageInput" accept="image/*"/>
+      <select id="imageType">
+        <option value="m16c">640x400 16 Color 80x25 Text</option>
+      </select>
+      <select id="ditherType">
+        <option value="">None</option>
+        <option value="FloydSteinberg">Floyd Steinberg</option>
+        <option value="FalseFloydSteinberg">False Floyd Steinberg</option>
+        <option value="Stucki">Stucki</option>
+        <option value="Atkinson">Atkinson</option>
+        <option value="Jarvis">Jarvis</option>
+        <option value="Burkes">Burkes</option>
+        <option value="Sierra">Sierra</option>
+        <option value="TwoSierra">Two Sierra</option>
+        <option value="SierraLite">Sierra Lite</option>
+      </select>
+      <input type="checkbox" id="serpentineDither">
+      <label for="serpentineDither">Serpentine Dither</label>
+      <button id="process">Process</button>
+    </div>
+    <img id="image" hidden>
+    <canvas id="canvas" width="640" height="400"></canvas>
+    <img id="scaledImage">
+    <canvas id="preview" width="640" height="400" hidden></canvas>
+    <img id="previewImage">
+    <script src="rgbquant.js"></script>
+    <script src="font_lib.js"></script>
+    <script src="font_applier.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div>
+            <input type="file" id="imageInput" accept="image/*"/>
+            <button id="process">Process</button>
+        </div>
+        <div>
+            <label>charWidth</label>
+            <input type="number" min="1" max="64" value="8" id="charWidth">
+        </div>
+        <div>
+            <label>charHeight</label>
+            <input type="number" min="1" max="64" value="11" id="charHeight">
+        </div>
+        <div>
+            <label>charXOffset</label>
+            <input type="number" min="0" max="64" value="0" id="charXOffset">
+        </div>
+        <div>
+            <label>charYOffset</label>
+            <input type="number" min="0" max="64" value="0" id="charYOffset">
+        </div>
+        <div>
+            <label>charsWide</label>
+            <input type="number" min="1" max="64" value="16" id="charsWide">
+        </div>
+        <div>
+            <label>charsHigh</label>
+            <input type="number" min="1" max="64" value="16" id="charsHigh">
+        </div>
+        <div>
+            <label>output</label>
+            <input type="text" id="output" readonly>
+        </div>
+        <img id="image" hidden>
+        <canvas id="bounding" width="640" height="400"></canvas>
+        <canvas id="processCanvas" width="640" height="400"></canvas>
+        <script src="rgbquant.js"></script>
+        <script src="font_lib.js"></script>
+        <script src="font_gen.js"></script>
+    </body>
+</html>
+
