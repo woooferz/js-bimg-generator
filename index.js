@@ -209,7 +209,7 @@ processButton.onclick = function() {
 		}
 	}
 
-	const quantizer = new RgbQuant({palette: palette, colors: 16})
+	const quantizer = new RgbQuant({palette: palette, colors: 14})
 	if (paletteSelect.value == "best") {
 		quantizer.sample(canvas)
 	}
